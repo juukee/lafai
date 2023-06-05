@@ -1,0 +1,38 @@
+{
+  "name": "@juukee/lafai",
+  "version": "1.0.1",
+  "description": "The cloud sdk for laf AI",
+  "main": "dist/index.js",
+  "publishConfig": {
+    "access": "public"
+},
+"type": "module",
+  "scripts": {
+    "watch": "tsc -w",
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "eslint": "eslint \"./**/*.ts\"",
+    "fix": "eslint --fix \"./**/*.ts\"",
+    "build": "tsc -p tsconfig.json",
+    "prepublishOnly": "npm run build"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/juukee/lafai.git"
+  },
+  "bugs": {
+    "url": "https://github.com/juukee/lafai/issues"
+  },
+  "homepage": "https://github.com/juukee/lafai#readme",
+  "keywords": [
+    "laf"
+  ],
+  "author": "juukee (admin@juukee.cn)",
+  "license": "ISC",
+  "devDependencies": {
+    "typescript": "^4.9.4"
+  },
+  "dependencies": {
+    "axios": "^1.4.0",
+    "chatgpt": "^5.2.5"
+  }
+}
