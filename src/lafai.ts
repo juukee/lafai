@@ -3,8 +3,10 @@ import request, { AxiosStatic } from 'axios'
 import {
   LafAiSdkInterface
 } from './lafai.interface.js'
-import {ChatGPTAPIOptions } from 'chatgpt'
+
 import { IChatGPT } from './chatgpt.interface.js'
+import { ChatGPTAPI, ChatGPTAPIOptions } from 'chatgpt';
+
 
 export class LafAi implements LafAiSdkInterface {
   /**
@@ -14,7 +16,6 @@ export class LafAi implements LafAiSdkInterface {
   private _chatgpt: IChatGPT; 
   
   private async _createChatGPT(options: ChatGPTAPIOptions):Promise<IChatGPT> {
-    const ChatGPTAPI = (await (import('chatgpt'))).ChatGPTAPI;
     return new ChatGPTAPI(options);
   }
   

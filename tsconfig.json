@@ -22,8 +22,7 @@
     "skipDefaultLibCheck": true,
     "skipLibCheck": true,
     "target": "es2017",
-    "module": "esnext",
-    "moduleResolution":"nodenext",
+    "module": "commonjs",
     "alwaysStrict": true,
     "lib": [
       "es2015",

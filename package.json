@@ -1,12 +1,13 @@
 {
   "name": "@juukee/lafai",
-  "version": "1.0.1",
+  "version": "1.0.5",
   "description": "The cloud sdk for laf AI",
-  "main": "dist/index.js",
+  "main": "dist/index.cjs.js",  
+  "module": "dist/index.mjs",    
   "publishConfig": {
     "access": "public"
-},
-"type": "module",
+  },
+  "type": "commonjs",
   "scripts": {
     "watch": "tsc -w",
     "test": "echo \"Error: no test specified\" && exit 1",
