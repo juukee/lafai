@@ -5,10 +5,9 @@ import {
 } from './lafai.interface.js'
 
 import { IChatGPT } from './chatgpt.interface.js'
-import { ChatGPTAPI, ChatGPTAPIOptions } from 'chatgpt';
-
-
+import  { ChatGPTAPIOptions }  from 'chatgpt'
 export class LafAi implements LafAiSdkInterface {
+  
   /**
    * This method should be overwrite
    * @returns
@@ -16,8 +15,10 @@ export class LafAi implements LafAiSdkInterface {
   private _chatgpt: IChatGPT; 
   
   private async _createChatGPT(options: ChatGPTAPIOptions):Promise<IChatGPT> {
+    const { ChatGPTAPI } = await import('chatgpt');
     return new ChatGPTAPI(options);
   }
+ 
   
   getChatGPT(options?: ChatGPTAPIOptions): IChatGPT {
     if (!this._chatgpt) {
