@@ -1,18 +1,17 @@
 {
   "name": "@juukee/lafai",
-  "version": "1.0.8",
-  "description": "The cloud sdk for laf AI", 
+  "version": "1.0.10",
+  "description": "The cloud sdk for laf AI",
   "main": "./dist/index.js",
   "publishConfig": {
     "access": "public"
   },
-  "type": "commonjs",
   "scripts": {
     "watch": "tsc -w",
     "test": "echo \"Error: no test specified\" && exit 1",
     "eslint": "eslint \"./**/*.ts\"",
     "fix": "eslint --fix \"./**/*.ts\"",
-    "build": "tsc -p tsconfig.json",
+    "build": "rollup -c rollup.config.js --bundleConfigAsCjs",
     "prepublishOnly": "npm run build"
   },
   "repository": {
@@ -29,7 +28,14 @@
   "author": "juukee (admin@juukee.cn)",
   "license": "ISC",
   "devDependencies": {
-    "typescript": "^4.9.4"
+    "@rollup/plugin-babel": "^6.0.3",
+    "@rollup/plugin-commonjs": "^25.0.0",
+    "@rollup/plugin-json": "^6.0.0",
+    "@rollup/plugin-node-resolve": "^15.1.0",
+    "@rollup/plugin-typescript": "^11.1.1",
+    "rollup": "^3.23.1",
+    "tslib": "^2.5.3",
+    "typescript": "^4.9.5"
   },
   "dependencies": {
     "axios": "^1.4.0",

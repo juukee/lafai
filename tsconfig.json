@@ -1,39 +1,22 @@
 {
-  "compileOnSave": true,
+  "compileOnSave": true, 
   "compilerOptions": {
     "allowJs": false,
-    "allowUnreachableCode": false,
-    "allowUnusedLabels": false,
-    "declaration": true,
-    "experimentalDecorators": true,
-    "emitDecoratorMetadata": true,
-    "importHelpers": false,
+    "declaration": true, 
     "declarationMap": true,
-    // "declarationDir": "types",
-    "noEmitOnError": false,
-    "noFallthroughCasesInSwitch": true,
-    "noImplicitAny": false,
-    "noUnusedLocals": true,
-    "noUnusedParameters": true,
-    "outDir": "dist",
-    "pretty": true,
-    "removeComments": false,
-    "stripInternal": true,
-    "skipDefaultLibCheck": true,
-    "skipLibCheck": true,
-    "target": "es2017",
-    "module": "commonjs",
-    "alwaysStrict": true,
+    "module": "es2020", 
+    "target": "es2020",
+    "strict": true, 
+    "moduleResolution": "node",
     "lib": [
-      "es2015",
-      "es6",
+      "es2020",
       "dom"
     ]
   },
   "include": [
-    "src/**/*",
+    "src/**/*"
   ],
   "exclude": [
-    "tests",
+    "tests"
   ]
 }
