@@ -2,12 +2,11 @@
 
 ```ts
 import cloud from '@lafjs/cloud'
-import LafAi from '@juukee/lafai'
+import lafai from '@juukee/lafai'
 exports.main = async function (ctx) {
-  const lafAi = new LafAi()
-  const chatgpt = lafAi.getChatGPT({
+  const chatgpt = lafai.getChatGPT({
     apiKey: 'your-key',
-    modelId: 'model_special',
+    debug: true
   })
 }
 ```
