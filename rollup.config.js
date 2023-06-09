@@ -7,7 +7,8 @@ import json from '@rollup/plugin-json';
 export default {
   input: 'src/index.ts',
   output: {
-    dir: 'dist'
+    dir: 'dist',
+    exports: 'named',
   },
   external: ['tslib'],
   plugins: [
@@ -16,7 +17,7 @@ export default {
     commonjs(),
     typescript({
       tsconfig: './tsconfig.json',
-      outDir: './dist/typescript'
+      outDir: './dist/types'
     }),
     babel({
       include: ['src/**/*', 'dist/**/*'], 

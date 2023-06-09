@@ -2,7 +2,9 @@
   "name": "@juukee/lafai",
   "version": "1.0.10",
   "description": "The cloud sdk for laf AI",
-  "main": "./dist/index.js",
+  "main": "dist/lafai.js",
+  "module": "dist/es/lafai.js",
+  "types": "dist/types/lafai.d.ts",
   "publishConfig": {
     "access": "public"
   },
@@ -33,6 +35,7 @@
     "@rollup/plugin-json": "^6.0.0",
     "@rollup/plugin-node-resolve": "^15.1.0",
     "@rollup/plugin-typescript": "^11.1.1",
+    "@types/node": "^20.2.5",
     "rollup": "^3.23.1",
     "tslib": "^2.5.3",
     "typescript": "^4.9.5"
