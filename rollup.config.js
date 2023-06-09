@@ -26,7 +26,10 @@ export default {
       os: 'require$$0$2',
       zlib: 'zlib',
       events: 'EventEmitter'
-    }
+    },
+    dir: 'dist',
+    exports: 'named',
+
   },
   external: ['tslib'],
   plugins: [
