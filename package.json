@@ -1,10 +1,10 @@
 {
   "name": "@juukee/lafai",
-  "version": "1.0.11",
+  "version": "1.0.12",
   "description": "The cloud sdk for laf AI",
-  "main": "dist/lafai.js",
-  "module": "dist/es/lafai.js",
-  "types": "dist/types/lafai.d.ts",
+  "main": "dist/index.js",
+  "module": "dist/index.esm.js",
+  "types": "dist/types/index.d.ts",
   "publishConfig": {
     "access": "public"
   },
@@ -13,7 +13,7 @@
     "test": "echo \"Error: no test specified\" && exit 1",
     "eslint": "eslint \"./**/*.ts\"",
     "fix": "eslint --fix \"./**/*.ts\"",
-    "build": "rollup -c rollup.config.js --bundleConfigAsCjs",
+    "build": "rollup --config rollup.config.ts --configPlugin typescript",
     "prepublishOnly": "npm run build"
   },
   "repository": {
@@ -30,17 +30,15 @@
   "author": "juukee (admin@juukee.cn)",
   "license": "ISC",
   "devDependencies": {
-    "@rollup/plugin-babel": "^6.0.3",
+    "@lafjs/cloud": "^1.0.0-beta.7",
     "@rollup/plugin-commonjs": "^25.0.0",
     "@rollup/plugin-json": "^6.0.0",
     "@rollup/plugin-node-resolve": "^15.1.0",
     "@rollup/plugin-terser": "^0.4.3",
     "@rollup/plugin-typescript": "^11.1.1",
-    "rollup-plugin-polyfill-node": "^0.12.0",
     "@types/node": "^20.2.5",
-    "rollup": "^3.23.1",
-    "tslib": "^2.5.3",
-    "typescript": "^4.9.5"
+    "rollup": "^3.24.1",
+    "typescript": "^5.1.3"
   },
   "dependencies": {
     "axios": "^1.4.0",

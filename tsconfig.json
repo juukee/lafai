@@ -1,8 +1,5 @@
 {
   "compilerOptions": {
-    "allowJs": false,
-    "declaration": true, 
-    "declarationMap": true,
     "module": "es2020", 
     "target": "es2020",
     "strict": true, 
